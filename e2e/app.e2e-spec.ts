@@ -1,6 +1,6 @@
 import { TpOpenClassroomPage } from './app.po';
 
-describe('tp-open-classroom App', () => {
+describe('simple-blog-app App', () => {
   let page: TpOpenClassroomPage;
 
   beforeEach(() => {
