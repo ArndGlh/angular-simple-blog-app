@@ -1,0 +1,22 @@
+<li [ngClass]="{'list-group-item': true,
+'list-group-item-success': loveItsPositifs(),
+'list-group-item-danger': !loveItsPositifs()}">
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <h4 [ngStyle]="{color: getColor()}">{{ postTitle }}</h4>
+    </div>
+    <div class="col">
+      {{ postDate | date:short}}
+    </div>
+  </div>
+  <div class="row">
+    {{ postContent }}
+  </div>
+  <div class="row">
+    <button class="btn btn-sm btn-success"(click)="like()">J'aime</button>
+    <button class="btn btn-sm btn-danger"(click)="dislike()">Je n'aime pas</button>
+    Nombre de likes : {{ postLikes }}
+  </div>
+</div>
+</li>
